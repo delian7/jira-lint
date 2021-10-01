@@ -129,6 +129,7 @@ async function run(): Promise<void> {
     // use the last match (end of the branch name)
     const issueKey = issueKeys[issueKeys.length - 1];
     console.log(`JIRA key -> ${issueKey}`);
+    console.log('HIII!!');
 
     const { getTicketDetails } = getJIRAClient(JIRA_BASE_URL, JIRA_TOKEN);
     const details: JIRADetails = await getTicketDetails(issueKey);
