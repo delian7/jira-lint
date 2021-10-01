@@ -345,6 +345,9 @@ export const isIssueStatusValid = (
     return true;
   }
 
+  core.info(allowedIssueStatuses[0]);
+  core.info(`ticket status is: ${details.status}`);
+
   return allowedIssueStatuses.includes(details.status);
 };
 
@@ -355,7 +358,7 @@ export const getInvalidIssueStatusComment = (
   /** Threshold of additions allowed. */
   allowedStatuses: string
 ): string =>
-  `<p>:broken_heart: The detected issue is not in one of the allowed statuses :broken_heart: </p>    
+  `<p>:broken_heart: The detected issue is not in one of the allowed statuses :broken_heart: </p>
    <table>
      <tr>
         <th>Detected Status</th>
